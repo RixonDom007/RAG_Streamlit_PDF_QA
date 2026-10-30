@@ -20,7 +20,7 @@ if uploaded_file is not None:
     with open(save_path, "wb") as f:
         f.write(uploaded_file.getbuffer())
 
-    process_document = process_document_to_chroma_db(uploaded_file.name)
+    process_document = process_document_to_chroma_db(save_path)
     st.info("Document Processed Successfully")
 
 # text widget to get user input
