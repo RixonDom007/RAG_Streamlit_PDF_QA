@@ -9,7 +9,7 @@ from langchain_chroma import Chroma
 from langchain_groq import ChatGroq
 from langchain_classic.chains import RetrievalQA
 
-os.environ["GROQ_API_KEY"]=os.getenv("GROQ_KEY")
+os.environ["GROQ_API_KEY"]=st.secrets["GROQ_KEY"]
 
 working_dir = os.path.dirname(os.path.abspath((__file__)))
 
